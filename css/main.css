@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap');
+
+*,
+*:after,
+*:before {
+	box-sizing: border-box;
+}
+body {
+	background-color: #fafafa;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+header {
+	display: flex;
+	justify-content: space-between;
+	border: 1.5px solid #e7e7e7;
+	background-color: #fff;
+	height: 58px;
+	width: 100%;
+}
+/* Logo Instagram */
+.header__logo {
+	width: 150px;
+	padding: 10px;
+	cursor: pointer;
+}
+/* Icon Mensagem */
+.header__direct {
+	padding: 20px;
+	cursor: pointer;
+}
+/* Section Stories */
+.main__stories {
+	display: flex;
+	justify-content: space-between;
+	padding: 10px;
+	overflow: scroll;
+}
+/* Stories Visualizados */
+.stories__profile {
+	height: 70px;
+	border-radius: 100vh;
+	border: #fafafa solid 2px;
+}
+/* Stories Não visualizados */
+.stories__new {
+	background: linear-gradient(45deg, rgba(245,160,77,1) 0%, rgba(160,15,139,1) 100%);
+	display: grid;
+	place-content: center;
+	border-radius: 100vh;
+	padding: 3px;
+	margin: 0 5px;
+}
+
+/* ------------------------------------------- */
+/*               Parte do Feed                 */
+/* ------------------------------------------- */
+
+.feed {
+	width: 90%;
+}
+
+.main__feed {
+	display: grid;
+	place-content: center;
+	row-gap: 30px;
+	padding: 16px;
+}
+.card__feed {
+	border-radius: 8px;
+	border: 1px solid #e6e6e6;
+}
+
+.card__header {
+	display: flex;
+	justify-content: space-between;
+	padding: 8px;	
+	align-items: center;
+}
+
+.content__header {
+	display: flex;
+	width: 200px;
+	color: black;
+    font-size: 13px;
+    font-weight: bold;
+    text-decoration: none;
+}
+.content__header p {
+	margin-left: 10px;
+}
+.card__header__profile {
+	height: 40px;
+	border-radius: 100vh;
+}
+
+.card__img__main {
+	width: 100%;
+}
+
+.card__footer__interation {	
+	display: flex;
+	justify-content: space-between;
+	padding: 8px;
+	font-size: 24px;
+}
+
+.content__footer {
+	display: flex;
+	justify-content: space-between;
+	width: 70px;
+}
+
+.card__footer__curtida {
+	display: grid;
+	grid-template-columns: 0.12fr 0.9fr;
+	align-items: center;
+	font-family: Open Sans;
+	font-size: 12px;
+	padding-left: 8px;
+	background-color: #0000000d;
+}
+.card__footer__curtida span {
+	color: black;
+	font-weight: bold;
+}
+.profile__footer {
+	width: 30px;
+	border-radius: 100vh;
+}
+
+.card__footer__cutida {
+	font-size: 12px;
+}
+
+/* DeskTop */
+
+@media (min-width:1025px) { 
+/* big landscape tablets, laptops, and desktops */
+	header {
+	padding: 0 360px;
+	}
+
+	.feed {
+		width: 47%;
+	}
+
+	.main__stories {
+		overflow: initial;
+	}
+
+	.card__footer__curtida {
+		grid-template-columns: 0.1fr 1.5fr;	
+	}
+
+}
